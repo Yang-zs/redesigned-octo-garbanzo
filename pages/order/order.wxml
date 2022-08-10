@@ -1,0 +1,60 @@
+<view class="order">
+  <!-- 商品展示列表 -->
+  <!-- 一个商品 -->
+  <!-- {{ellipsis ? 'content' : 'order-item' }} -->
+  <!-- 第一个默认显示 -->
+  <view wx:for="{{orderList}}" wx:key="index">
+    <view class="order-item" wx:if="{{index === 0}}">
+      <view class="order-item-title">
+        {{item.title}}
+        <text class="order-item-title-price">￥{{item.price}}</text>
+      </view>
+      <view class="order-item-number">X{{item.num}}</view>
+    </view>
+  </view>
+  <!-- 第二个可以收起来的盒子 -->
+  <view wx:for="{{orderList}}" wx:key="index">
+    <view class="order-item" class="{{ellipsis ? 'content' : 'order-item' }}" wx:if="{{index !== 0}}">
+      <view class="order-item-title">
+        {{item.title}}
+        <text class="order-item-title-price">￥{{item.price}}</text>
+      </view>
+      <view class="order-item-number">X{{item.num}}</view>
+    </view>
+  </view>
+  <view class="btn-slide" bindtap="ellipsis">共<text class="btn-title">2</text>件商品 <text class="btn-isShow"> {{ellipsis ? '展开' : '收起'}}</text> <text class="btn-icon">{{ellipsis ? '﹀' : '︿'}}</text> </view>
+
+
+  <!-- 余额 -->
+  <view class="balance">
+    <view class="balance-left">
+      余额<text class="balance-text">￥{{balance}}</text>
+    </view>
+    <view class="balance-right">
+      <switch color="#ffa72b" checked="{{isChecked}}" bindchange="changeSwitch"></switch>
+    </view>
+  </view>
+
+  <!-- 商品金额 -->
+  <view class="total-price">
+    <view class="total-price-title">商品金额</view>
+    <view class="total-price-price">￥{{totalPrice}}</view>
+  </view>
+  <!-- 余额减扣 -->
+  <view class="total-price" wx:if="{{isChecked}}">
+    <view class="total-price-title">{{balanceText}}</view>
+    <view class="total-price-price">{{Discount}}</view>
+  </view>
+  <!-- 携带商品 -->
+  <view class="carry-goods">
+    请支付完成后携带商品
+  </view>
+  <!-- 底部导航 -->
+  <view class="bottom-navigation">
+    <view>
+      <text class="bottom-payfor">实际支付: </text>
+      <text class="bottom-price">￥{{endPrice}}</text>
+    </view>
+    <view class="confirm-payment" bindtap="payment">确认支付</view>
+  </view>
+</view>

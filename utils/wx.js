@@ -1,7 +1,7 @@
-function wxToPromise(method = 'request', options = {}){
-  return new Promise((resolve,reject)=>{
+function wxToPromise(method = "request", options = {}) {
+  return new Promise((resolve, reject) => {
     options.success = resolve
-    options.fail = error =>{
+    options.fail = error => {
       reject(error)
     }
     wx[method](options)
@@ -9,4 +9,3 @@ function wxToPromise(method = 'request', options = {}){
 }
 
 export default wxToPromise
-

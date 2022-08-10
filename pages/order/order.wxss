@@ -1,0 +1,103 @@
+.order {
+  height: 100%;
+  background-color: hsl(0, 7%, 97%);
+}
+.order-item {
+  display: block;
+  border-bottom: 1px solid #e6e6e6;
+  background-color: #ffffff;
+  padding: 30rpx 25rpx;
+}
+.order-item-title {
+  font-size: 35rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.order-item-number {
+  padding-top: 20rpx;
+  text-align: right;
+}
+.order-item .order-item-title .order-item-title-price {
+  color: red;
+}
+.btn-slide {
+  background: #ffffff;
+  text-align: center;
+  padding: 35rpx 0;
+  margin: 0 auto;
+  display: block;
+  text-decoration: none;
+}
+.btn-title {
+  font-size: 27.5rpx;
+}
+
+/* 展开样式 */
+.content {
+  display: none;
+  text-overflow: clip;
+  overflow: visible;
+}
+.balance,
+.total-price,
+.reduce-balance {
+  font-size: 30rpx;
+  background-color: #ffffff;
+  margin: 35rpx 0;
+  padding: 38rpx 20rpx;
+}
+.balance {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.balance .balance-left .balance-text {
+  color: red;
+  margin-left: 28rpx;
+}
+
+.total-price {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.total-price .total-price-price {
+  color: red;
+}
+
+.carry-goods {
+  width: 100%;
+  height: 290rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bottom-navigation {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  background-color: #ffffff;
+  height: 110rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.bottom-payfor {
+  color: #888888;
+}
+.bottom-price {
+  font-size: 28rpx;
+  color: red;
+}
+.confirm-payment {
+  height: 100%;
+  width: 250rpx;
+  background-color: #ffa72b;
+  text-align: center;
+  line-height: 125rpx;
+  color: white;
+  font-weight: 200;
+}
