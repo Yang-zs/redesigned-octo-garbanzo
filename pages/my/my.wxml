@@ -1,2 +1,29 @@
-<!--pages/my/my.wxml-->
-<text>pages/my/my.wxml</text>
+<view class="main">
+  <!-- 头像个人信息 -->
+  <view class="information">
+    <!-- 头像图片 -->
+    <view class="information-image">
+      <image src="/assets/images/微信图片_20220811104521.png"></image>
+    </view>
+    <!-- 信息 -->
+    <view class="information-text">
+      <view class="information-name">name</view>
+      <view class="information-balance">账户余额 : <text class="balance-text">{{balance}}元</text></view>
+    </view>
+  </view>
+  <!-- 我的钱包 -->
+  <view class="wallet" bindtap="goWallet">
+    <image src="/assets/images/user/money.png"></image>
+    <view class="wallet-text">我的钱包</view>
+    <text class="wallet-deno">充就送</text>
+  </view>
+  <!-- 模块 -->
+  <view class="modular-father">
+    <view class="modular" wx:for="{{modularList}}" wx:key="index">
+      <image src="{{item.img}}"></image>
+      <view class="wallet-text">{{item.text}}</view>
+      <view class="arrow">＞</view>
+    </view>
+  </view>
+
+</view>

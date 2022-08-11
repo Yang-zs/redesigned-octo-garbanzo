@@ -1,0 +1,73 @@
+.main {
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+}
+/* 图片 按钮 */
+.top {
+  background-color: #f9f9f9;
+  width: 100%;
+  height: 500rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.top-img image {
+  width: 140rpx;
+  height: 140rpx;
+}
+.top-btn {
+  margin-top: 50rpx;
+}
+.top-btn button {
+  background-color: #f5ba47;
+  color: white;
+  font-weight: normal;
+}
+/* 你可能喜欢 */
+.interested {
+  padding: 15rpx;
+  width: 100%;
+  border-bottom: 1px solid rgb(216, 215, 215);
+  text-align: center;
+  color: red;
+}
+.interested text {
+  color: black;
+}
+/* 感兴趣模块 */
+.shops {
+  position: relative;
+  background-color: #ffffff;
+}
+.shops,
+.shop-img {
+  width: 100%;
+}
+.shops-img {
+  margin-top: 30rpx;
+}
+.shops-img image {
+  width: 100%;
+  height: 300rpx;
+}
+.shops-title {
+  color: #adadad;
+}
+.shops-price {
+  color: red;
+  font-size: 50rpx;
+}
+.shops-volume {
+  color: gray;
+  font-size: 30rpx;
+}
+.shops-btn {
+  background-color: #ff5050;
+  color: white;
+  font-weight: normal;
+  position: absolute;
+  right: 15rpx;
+  bottom: 0rpx;
+}

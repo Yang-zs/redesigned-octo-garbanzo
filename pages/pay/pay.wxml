@@ -1,0 +1,23 @@
+<view class="main">
+  <!-- 图片 按钮 -->
+  <view class="top">
+    <view class="top-img">
+      <image src="/assets/images/face.png"></image>
+    </view>
+    <view class="top-title">支付成功</view>
+    <view class="top-btn"> <button class="top-bnt-itm" bindtap="goHome">返回首页</button> </view>
+  </view>
+  <!-- 你可能喜欢 -->
+  <view class="interested">*<text>你可能喜欢</text>*</view>
+  <!-- 感兴趣模块 -->
+  <view class="shops">
+    <view class="shops-img">
+      <image src="/assets/images/00.png"></image>
+    </view>
+    <view class="shops-title">海南现摘芒果</view>
+    <view class="shops-price">￥29.9</view>
+    <view class="shops-volume">销量：201件</view>
+    <button class="shops-btn" size="mini" style="font-size: 30rpx;">立即购买</button>
+  </view>
+
+</view>

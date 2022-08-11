@@ -1,0 +1,25 @@
+<view class="main">
+  <view class="top">
+
+    <view class="top-first">
+      <view class="top-img">
+        <image src="/assets/images/user/gold.png"></image>
+      </view>
+      <view class="top-title">
+        <view class="title-text">账户余额</view>
+        <view class="title-price">￥80元</view>
+      </view>
+    </view>
+    <view class="detailed" bindtap="goDetailed">查看余额明细</view>
+  </view>
+  <!-- 充值金额 -->
+  <view class="amount">充值金额</view>
+  <!-- 选择金额 -->
+  <view class="amount-money">
+    <view class="amount-item" wx:for="{{money}}" wx:key="index">
+      <view class="item-money">{{item.money}}</view>
+      <view class="item-text">{{item.text}}</view>
+    </view>
+
+  </view>
+</view>

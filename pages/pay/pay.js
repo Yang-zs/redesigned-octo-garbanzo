@@ -1,24 +1,15 @@
-// pages/my/my.js
+// pages/pay/pay.js
 Page({
   /**
    * 页面的初始数据
    */
-  data: {
-    // 模块
-    modularList: [
-      { img: "/assets/images/user/shop_order.png", text: "微店订单" },
-      { img: "/assets/images/user/online_order.png", text: "优选订单" },
-      { img: "/assets/images/user/address.png", text: "地址管理" },
-      { img: "/assets/images/user/tel.png", text: "联系客服" },
-      { img: "/assets/images/user/feedback.png", text: "意见反馈" },
-    ],
-    balance: 90, // 余额
-  },
-  goWallet() {
-    wx.navigateTo({
-      url: "/pages/wallet/wallet",
+  data: {},
+  goHome() {
+    wx.switchTab({
+      url: "/pages/shop/shop",
     })
   },
+
   /**
    * 生命周期函数--监听页面加载
    */

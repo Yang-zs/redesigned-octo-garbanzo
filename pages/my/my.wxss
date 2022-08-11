@@ -1,1 +1,78 @@
-/* pages/my/my.wxss */
+.main {
+  width: 100%;
+  height: 100%;
+  background-color: #eeeded;
+}
+/* 头像个人信息 */
+.information {
+  height: 260rpx;
+  width: 100%;
+  background-image: linear-gradient(#edb445, #faecc9);
+  display: flex;
+  align-items: center;
+}
+.information-image {
+  background-color: gray;
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 50%;
+  margin: 0 55rpx 0 35rpx;
+}
+.information-image image {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+.information-name {
+  margin-bottom: 30rpx;
+}
+.balance-text {
+  color: red;
+}
+.wallet {
+  width: 100%;
+  background-color: #ffffff;
+  margin: 35rpx 0 55rpx 0;
+  display: flex;
+  align-items: center;
+  padding: 25rpx 0;
+  position: relative;
+}
+.wallet image {
+  width: 55rpx;
+  height: 55rpx;
+  margin: 0 30rpx 0 35rpx;
+}
+
+.wallet-deno {
+  font-size: 26rpx;
+  background-color: red;
+  color: white;
+  border-radius: 10rpx;
+  padding: 3rpx 9rpx;
+  position: absolute;
+  top: 15rpx;
+  left: 272rpx;
+}
+.modular {
+  width: 100%;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  padding: 25rpx 0;
+  margin: 1rpx 0;
+  position: relative;
+}
+.modular image {
+  width: 55rpx;
+  height: 55rpx;
+  margin: 0 30rpx 0 35rpx;
+}
+.arrow {
+  position: absolute;
+  right: 18rpx;
+  color: rgb(206, 205, 205);
+}
+.modular-father :last-child {
+  margin-top: 30rpx;
+}

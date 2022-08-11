@@ -22,7 +22,7 @@
       <view class="order-item-number">X{{item.num}}</view>
     </view>
   </view>
-  <view class="btn-slide" bindtap="ellipsis">共<text class="btn-title">2</text>件商品 <text class="btn-isShow"> {{ellipsis ? '展开' : '收起'}}</text> <text class="btn-icon">{{ellipsis ? '﹀' : '︿'}}</text> </view>
+  <view class="btn-slide" bindtap="ellipsis">共<text class="btn-title">{{orderList.length}}</text>件商品 <text class="btn-isShow"> {{ellipsis ? '展开' : '收起'}}</text> <text class="btn-icon">{{ellipsis ? '﹀' : '︿'}}</text> </view>
 
 
   <!-- 余额 -->

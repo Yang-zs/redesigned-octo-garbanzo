@@ -1,24 +1,22 @@
-// pages/my/my.js
+// pages/wallet/wallet.js
 Page({
   /**
    * 页面的初始数据
    */
   data: {
-    // 模块
-    modularList: [
-      { img: "/assets/images/user/shop_order.png", text: "微店订单" },
-      { img: "/assets/images/user/online_order.png", text: "优选订单" },
-      { img: "/assets/images/user/address.png", text: "地址管理" },
-      { img: "/assets/images/user/tel.png", text: "联系客服" },
-      { img: "/assets/images/user/feedback.png", text: "意见反馈" },
+    money: [
+      { money: 0.1, text: "充10元送1元" },
+      { money: 20, text: "充20元送2元" },
+      { money: 50, text: "充50元送5元" },
+      { money: 100, text: "充100元送10元" },
     ],
-    balance: 90, // 余额
   },
-  goWallet() {
+  goDetailed() {
     wx.navigateTo({
-      url: "/pages/wallet/wallet",
+      url: "/pages/detail/detail",
     })
   },
+
   /**
    * 生命周期函数--监听页面加载
    */

@@ -31,14 +31,15 @@ Page({
       this.setData({
         balanceText: "未使用优惠",
         Discount: "",
-        endPrice: price1,
+        endPrice: price1.toFixed(2),
       })
     } else {
-      // Switch选中 使用优惠券
+      // Switch选中 使用优惠券 减扣
       const price2 = this.data.totalPrice - this.data.balance
+      const price3 = this.data.balance
       this.setData({
         balanceText: "余额减扣",
-        Discount: "￥-" + this.data.balance,
+        Discount: "￥-" + price3.toFixed(2),
       })
 
       if (price2 <= 0) {
@@ -49,29 +50,17 @@ Page({
         })
       } else {
         this.setData({
-          endPrice: price2,
+          endPrice: price2.toFixed(2),
         })
       }
     }
-    // 未使用优惠券 最终的实际支付
-    // if (!status) {
-    // console.log(price1)
-    // this.setData({})
-    // } else {
-    // 使用优惠券 最终的实际支付
-    // console.log(price2)
-    // }
   },
-  // payment() {
-  //   wx.requestPluginPayment({
-  //     version: "release",
-  //     fee: 1,
-  //     paymentArgs: {},
-  //     currencyType: "CNY",
-  //     success(res) {},
-  //     fail(res) {},
-  //   })
-  // },
+  // 确认支付
+  payment() {
+    wx.navigateTo({
+      url: "/pages/pay/pay",
+    })
+  },
 
   /**
    * 生命周期函数--监听页面加载
@@ -97,15 +86,16 @@ Page({
     })
     // 默认实际支付
     const price2 = this.data.totalPrice - this.data.balance
+    const newPrice = this.data.totalPrice
     // 实际支付为-负数 则实际支付为0
     if (price2 <= 0) {
       this.setData({
         endPrice: 0,
-        Discount: "￥-" + this.data.totalPrice,
+        Discount: "￥-" + newPrice.toFixed(2),
       })
     } else {
       this.setData({
-        endPrice: price2,
+        endPrice: price2.toFixed(2),
       })
     }
   },
